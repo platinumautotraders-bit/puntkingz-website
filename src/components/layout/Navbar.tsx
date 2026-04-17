@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
-import { Menu, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, ChevronDown, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { NAV_LINKS, FUTURE_SPORTS } from "@/lib/constants";
@@ -12,12 +12,16 @@ import { MobileMenu } from "./MobileMenu";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [showStickyCta, setShowStickyCta] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [sportDropdown, setSportDropdown] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 50);
+      setShowStickyCta(window.scrollY > 600);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -126,6 +130,27 @@ export function Navbar() {
       </motion.header>
 
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
+
+      {/* Sticky bottom CTA — mobile only, appears after scrolling past hero */}
+      <AnimatePresence>
+        {showStickyCta && !mobileOpen && (
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 100, opacity: 0 }}
+            transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            className="md:hidden fixed bottom-0 left-0 right-0 z-50 p-3 bg-[rgba(5,5,8,0.95)] backdrop-blur-xl border-t border-border"
+          >
+            <a
+              href="#pricing"
+              className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-[#00ff87] to-[#00cc6a] text-[#050508] font-[family-name:var(--font-space-grotesk)] font-semibold text-sm"
+            >
+              Start Free Trial
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

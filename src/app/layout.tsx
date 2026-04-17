@@ -82,7 +82,7 @@ export default function RootLayout({
         className={`${spaceGrotesk.variable} ${dmSans.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <Navbar />
-        <main className="pt-16 md:pt-18">{children}</main>
+        <main className="pt-16 md:pt-18 pb-16 md:pb-0">{children}</main>
         <Footer />
       </body>
     </html>
