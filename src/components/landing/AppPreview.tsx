@@ -8,24 +8,24 @@ import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
 const screenshots = [
   {
-    src: "/images/Screenshot 2026-04-17 132045.png",
-    alt: "Punt Kingz NRL match predictions dashboard showing best bets and accuracy stats",
+    src: "/images/app-mockup-dashboard.jpg",
+    alt: "Punt Kingz NRL Round 2 dashboard showing Knights vs Sea Eagles best bet at 64% confidence",
     caption: "Match Predictions",
   },
   {
-    src: "/images/Screenshot 2026-04-17 132107.png",
-    alt: "Punt Kingz NRL match detail showing win probability and point band analysis",
+    src: "/images/app-mockup-matchdetail.jpg",
+    alt: "Punt Kingz NRL match detail showing Knights 64% win probability over Sea Eagles with point band analysis",
     caption: "Win Probability",
   },
   {
-    src: "/images/Screenshot 2026-04-17 132114.png",
-    alt: "Punt Kingz NRL point band distribution and Elo rating comparison",
+    src: "/images/app-mockup-bands.jpg",
+    alt: "Punt Kingz NRL point band distribution showing 50-59 at 34% with HIGH confidence and Elo ratings",
     caption: "Point Band Analysis",
   },
   {
-    src: "/images/Screenshot 2026-04-17 132124.png",
-    alt: "Punt Kingz NRL detailed prediction breakdown with Elo ratings",
-    caption: "Elo Ratings",
+    src: "/images/app-mockup-result.jpg",
+    alt: "Punt Kingz NRL result verification showing Knights correctly predicted by 18 pts, actual win by 20",
+    caption: "Verified Result",
   },
 ];
 
