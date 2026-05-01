@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Card } from "@/components/shared/Card";
 import { Button } from "@/components/shared/Button";
+import { TRIAL_CHECKOUT_URL } from "@/lib/constants";
 
 export function AboutContent() {
   return (
@@ -169,7 +170,7 @@ export function AboutContent() {
             </div>
 
             <div className="mt-12">
-              <Button href="/#pricing" size="lg">
+              <Button href={TRIAL_CHECKOUT_URL} size="lg">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>

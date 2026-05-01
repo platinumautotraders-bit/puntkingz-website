@@ -1,7 +1,7 @@
 "use client";
 
 import { Check } from "lucide-react";
-import { PRICING } from "@/lib/constants";
+import { PRICING, TRIAL_CHECKOUT_URL } from "@/lib/constants";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Button } from "@/components/shared/Button";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
@@ -55,7 +55,7 @@ export function Pricing() {
                 </ul>
 
                 {/* CTA */}
-                <Button href="#" size="lg" className="w-full">
+                <Button href={TRIAL_CHECKOUT_URL} size="lg" className="w-full">
                   Start Free Trial
                 </Button>
 

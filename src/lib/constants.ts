@@ -4,7 +4,13 @@ export const SITE = {
   description:
     "10,000 Monte Carlo simulations per match. Player-level data. Real-world adjustments. No AI guesswork.",
   url: "https://puntkingz.com",
+  appUrl: "https://nrl.puntkingz.com",
 } as const;
+
+// "Start Free Trial" buttons link here. The app creates a Stripe Checkout
+// session and redirects the user to it. After payment, an email with a
+// magic-link login is sent automatically.
+export const TRIAL_CHECKOUT_URL = "https://nrl.puntkingz.com/api/start-trial";
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },

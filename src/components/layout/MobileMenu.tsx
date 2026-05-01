@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import Link from "next/link";
-import { NAV_LINKS } from "@/lib/constants";
+import { NAV_LINKS, TRIAL_CHECKOUT_URL } from "@/lib/constants";
 import { Button } from "@/components/shared/Button";
 
 interface MobileMenuProps {
@@ -68,7 +68,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
 
               {/* CTA */}
               <div className="mt-auto">
-                <Button href="#pricing" size="lg" className="w-full">
+                <Button href={TRIAL_CHECKOUT_URL} size="lg" className="w-full">
                   Start Free Trial
                 </Button>
                 <p className="mt-3 text-xs text-text-faint text-center">

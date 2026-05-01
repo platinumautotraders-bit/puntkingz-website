@@ -15,6 +15,7 @@ import { Card } from "@/components/shared/Card";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/shared/Button";
 import { AnimatedCounter } from "@/components/shared/AnimatedCounter";
+import { TRIAL_CHECKOUT_URL } from "@/lib/constants";
 
 const adjustments = [
   {
@@ -322,7 +323,7 @@ export function HowItWorksContent() {
               Start your 7-day free trial. Full access to every prediction,
               every round.
             </p>
-            <Button href="/#pricing" size="lg">
+            <Button href={TRIAL_CHECKOUT_URL} size="lg">
               Start Free Trial
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>

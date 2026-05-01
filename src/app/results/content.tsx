@@ -6,6 +6,7 @@ import { AnimatedCounter } from "@/components/shared/AnimatedCounter";
 import { Card } from "@/components/shared/Card";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/shared/Button";
+import { TRIAL_CHECKOUT_URL } from "@/lib/constants";
 
 const overallStats = [
   { value: 82, suffix: "%", label: "Winner Accuracy", sub: "22 games" },
@@ -161,7 +162,7 @@ export function ResultsContent() {
             <p className="text-text-secondary mb-8 max-w-lg mx-auto">
               Join Punt Kingz and get access to every prediction before kickoff.
             </p>
-            <Button href="/#pricing" size="lg">
+            <Button href={TRIAL_CHECKOUT_URL} size="lg">
               Start Free Trial
             </Button>
           </ScrollReveal>

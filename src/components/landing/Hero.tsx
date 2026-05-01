@@ -6,6 +6,7 @@ import { heroTextReveal, heroLine } from "@/lib/animations";
 import { Button } from "@/components/shared/Button";
 import { AnimatedCounter } from "@/components/shared/AnimatedCounter";
 import { HeroBackground } from "./HeroBackground";
+import { TRIAL_CHECKOUT_URL } from "@/lib/constants";
 
 const heroStats = [
   { value: 82, suffix: "%", label: "Winner Accuracy" },
@@ -58,7 +59,7 @@ export function Hero() {
             variants={heroLine}
             className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button href="#pricing" size="lg">
+            <Button href={TRIAL_CHECKOUT_URL} size="lg">
               Start Free Trial
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>

@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, ChevronDown, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { NAV_LINKS, FUTURE_SPORTS } from "@/lib/constants";
+import { NAV_LINKS, FUTURE_SPORTS, TRIAL_CHECKOUT_URL } from "@/lib/constants";
 import { Button } from "@/components/shared/Button";
 import { MobileMenu } from "./MobileMenu";
 
@@ -114,7 +114,7 @@ export function Navbar() {
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-4">
             <div className="hidden md:block">
-              <Button href="#pricing" size="md">
+              <Button href={TRIAL_CHECKOUT_URL} size="md">
                 Start Free Trial
               </Button>
             </div>
@@ -142,7 +142,7 @@ export function Navbar() {
             className="md:hidden fixed bottom-0 left-0 right-0 z-50 p-3 bg-[rgba(5,5,8,0.95)] backdrop-blur-xl border-t border-border"
           >
             <a
-              href="#pricing"
+              href={TRIAL_CHECKOUT_URL}
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-[#00ff87] to-[#00cc6a] text-[#050508] font-[family-name:var(--font-space-grotesk)] font-semibold text-sm"
             >
               Start Free Trial
