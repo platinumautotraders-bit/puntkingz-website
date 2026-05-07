@@ -12,6 +12,10 @@ export const SITE = {
 // magic-link login is sent automatically.
 export const TRIAL_CHECKOUT_URL = "https://nrl.puntkingz.com/api/start-trial";
 
+// Existing customers sign in on the app. The marketing-site /login route
+// redirects here so the auth/session state stays on a single domain.
+export const LOGIN_URL = "https://nrl.puntkingz.com/login";
+
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "How It Works", href: "/how-it-works" },

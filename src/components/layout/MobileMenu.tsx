@@ -74,6 +74,13 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                 <p className="mt-3 text-xs text-text-faint text-center">
                   7-day free trial. Cancel anytime.
                 </p>
+                <Link
+                  href="/login"
+                  onClick={onClose}
+                  className="mt-4 block text-center text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+                >
+                  Already a member? Log in
+                </Link>
               </div>
             </div>
           </motion.div>

@@ -113,6 +113,12 @@ export function Navbar() {
 
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-4">
+            <Link
+              href="/login"
+              className="hidden md:inline-block text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+            >
+              Log in
+            </Link>
             <div className="hidden md:block">
               <Button href={TRIAL_CHECKOUT_URL} size="md">
                 Start Free Trial
